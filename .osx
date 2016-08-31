@@ -1,0 +1,53 @@
+
+#alias vim="DYLD_FORCE_FLAT_NAMESPACE=1 /usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/MacOS/Vim"
+alias ls='ls --color=always'
+#export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH=/usr/local/opt/coreutils/libexec/gnuman
+#export GREP_OPTIONS='--color=auto'
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
+#export HOMEBREW_CASK_OPTS="--appdir=~/Applications --caskroom=/opt/homebrew-cask/Caskroom"
+
+#alias man='_() { echo $1; man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1 1>/dev/null 2>&1;  if [ "$?" -eq 0 ]; then man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1; else man $1; fi }; _'
+
+[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2)" scp sftp ssh
+
+function psgrep() { ps axu | grep -v grep | grep "$@" -i --color=auto; }
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+   . $(brew --prefix)/etc/bash_completion
+fi
+
+
+complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall
+complete -W "NSGlobalDomain" defaults
+
+#bash and osx stuff
+alias h=history
+alias ios="open -a /Applications/Xcode.app/Contents/Applications/iPhone\ Simulator.app"
+alias sms="open -a /Applications/Messages.app"
+alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
+alias pg="ps aux | grep -i"
+alias nm="/Applications/terminal-notifier.app/Contents/MacOS/terminal-notifier -message "
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Disable Spotlight
+alias spotoff="sudo mdutil -a -i off"
+# Enable Spotlight
+alias spoton="sudo mdutil -a -i on"
+
+
+# View HTTP traffic
+alias sniff="sudo ngrep -d 'en0' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+#network stuff
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+alias whois="whois -h whois-servers.net"
+
+#export SWIFTENV_ROOT="$HOME/.swiftenv"
+#export PATH="$SWIFTENV_ROOT/bin:$PATH"
+#eval "$(swiftenv init -)"

@@ -1,0 +1,21 @@
+# Compiled Python files
+*.pyc
+# mac osx
+.DS_Store
+.AppleDouble
+.LSOverride
+.DS_Store
+Desktop.ini
+Icon
+# Use wildcards as well
+*~
+*.swp
+#vim shit
+.netrwhist
+# Thumbnails
+._*
+Thumbs.db
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes

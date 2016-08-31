@@ -1,0 +1,39 @@
+alias vi='/usr/local/bin/vim'
+alias con='ssh matt@mtt2p.kicks-ass.org -p 443'
+alias vie='ssh matt@192.168.0.121'
+alias matt='ssh matt@192.168.0.4'
+alias fw='ssh root@192.168.0.1'
+alias c='clear'
+alias w='which'
+alias ts1="rdesktop -u xkarl -d vie-i.local -p ps 172.20.20.70 -g 1600x1000"
+alias dvie="rdesktop -u karlm -d vie-i.local -p ps 10.16.101.150 -g 1600x1000"
+alias dism="rdesktop 127.0.0.1:8888 -f -u administrator -g 1600x1000"
+alias tism="ssh root@192.168.0.1 -L8888:192.168.1.11:3389"
+alias tde="ssh root@192.168.0.1 -L8888:176.9.80.93:33389"
+
+webapp(){
+user="xkarl"
+ssh svie31webapp$1 -l $user
+}
+
+
+#list all python files
+#alias lspy='ls -lsa *.py'
+#list all swp files from vim 
+#alias lsswp='ls -la \.*swp'
+#list all symbolic links in current directory
+#alias lsi="ls -lah | grep ^l"
+
+#jump to 
+alias desk='cd ~/Desktop'
+alias dl="cd ~/Downloads"
+
+#ls aliases
+alias ll="ls -al"
+#alias lh='ls -a | egrep "^\."'
+#alias lt='ls -Alhtr'
+#alias lp="ls -p"
+
+#tmux
+#alias tmux="TERM=screen-256color tmux"
+

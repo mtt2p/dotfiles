@@ -1,0 +1,32 @@
+[http]
+    sslVerify = false
+#    proxy = http://proxy:8080
+
+
+[core] 
+	autocrlf = false
+    safecrlf = true 
+	excludesfile = /Users/matt/.gitignore_global
+[alias] 
+	co = checkout 
+	ci = commit 
+	st = status 
+	br = branch 
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph 
+	type = cat-file -t 
+	dump = cat-file -p 
+[color] 
+    ui = auto 
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = matt
+	email = matthias2380@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true

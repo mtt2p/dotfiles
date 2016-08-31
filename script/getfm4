@@ -1,0 +1,8 @@
+rm -f ./main >/dev/null 2>&1
+
+echo ''
+curl -s http://fm4.orf.at/trackservicepopup/main | grep '|' | sed  's/<i>//g' | sed 's/<\/i>//g' | sed 's/<br>//g' | sed 's/<b>//g' | sed 's/<\/b>//g' | sed 's/      //g' | sed 's/\ |/ -/g'
+#grep '|' main | sed  's/<i>//g' | sed 's/<\/i>//g' | sed 's/<br>//g' | sed 's/<b>//g' | sed 's/<\/b>//g' | sed 's/      //g' | sed 's/\ |/ -/g'
+rm -f ./main >/dev/null 2>&1
+
+echo ''
