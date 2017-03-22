@@ -1,6 +1,6 @@
 [http]
     sslVerify = false
-#    proxy = http://proxy:8080
+    proxy = http://proxy:8080
 
 
 [core] 
@@ -24,7 +24,7 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [user]
-	name = matt
+	name = mtt2p
 	email = matthias2380@gmail.com
 [filter "lfs"]
 	clean = git-lfs clean %f
