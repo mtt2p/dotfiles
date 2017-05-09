@@ -1,12 +1,13 @@
 [http]
     sslVerify = false
-    proxy = http://proxy:8080
+#    proxy = http://proxy:8080
+
 
 
 [core] 
 	autocrlf = false
     safecrlf = true 
-	excludesfile = /Users/matt/.gitignore_global
+	excludesfile = /Users/karlm/.gitignore_global
 [alias] 
 	co = checkout 
 	ci = commit 
@@ -24,9 +25,11 @@
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [user]
-	name = mtt2p
-	email = matthias2380@gmail.com
+	name = 
+	email = 
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[commit]
+	template = /Users/karlm/.stCommitMsg

@@ -1,6 +1,7 @@
 
 #alias vim="DYLD_FORCE_FLAT_NAMESPACE=1 /usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/MacOS/Vim"
 alias ls='ls --color=always'
+PATH=/Users/karlm/.local/bin:$PATH
 #export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman
