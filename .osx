@@ -2,12 +2,19 @@
 #alias vim="DYLD_FORCE_FLAT_NAMESPACE=1 /usr/local/Cellar/macvim/7.4-73/MacVim.app/Contents/MacOS/Vim"
 alias ls='ls --color=always'
 PATH=/Users/karlm/.local/bin:$PATH
-#export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+PATH=$PATH:/usr/local/lib/ruby/gems/2.5.0/bin/
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman
+export PATH="/usr/local/opt/python/libexec/bin:$PATH" 
+export ANDROID_HOME=/Users/$USER/Library/Android/sdk
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 #export GREP_OPTIONS='--color=auto'
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
+
+export JAVA_HOME=`/usr/libexec/java_home`
+#export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/'
+
 #export HOMEBREW_CASK_OPTS="--appdir=~/Applications --caskroom=/opt/homebrew-cask/Caskroom"
 
 #alias man='_() { echo $1; man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1 1>/dev/null 2>&1;  if [ "$?" -eq 0 ]; then man -M $(brew --prefix)/opt/coreutils/libexec/gnuman $1; else man $1; fi }; _'
@@ -52,3 +59,5 @@ alias whois="whois -h whois-servers.net"
 #export SWIFTENV_ROOT="$HOME/.swiftenv"
 #export PATH="$SWIFTENV_ROOT/bin:$PATH"
 #eval "$(swiftenv init -)"
+echo "end osx"
+

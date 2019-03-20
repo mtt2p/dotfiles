@@ -1,13 +1,13 @@
 [http]
     sslVerify = false
-#    proxy = http://proxy:8080
+    proxy = http://proxy:8080
 
 
 
 [core] 
 	autocrlf = false
     safecrlf = true 
-	excludesfile = /Users/karlm/.gitignore_global
+	excludesfile = /Users/mattkarl/.gitignore_global
 [alias] 
 	co = checkout 
 	ci = commit 
@@ -22,14 +22,16 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [user]
-	name = 
-	email = 
+	name = Karl Matthias, IRS
+	email = m.karl@viennaairport.com
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
 [commit]
 	template = /Users/karlm/.stCommitMsg
+[merge]
+	tool = opendiff

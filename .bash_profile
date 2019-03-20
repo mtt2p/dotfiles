@@ -40,4 +40,5 @@ done
 #[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 #[ -e  "$HOME/dotfiles/bin" ] && PATH="$PATH:$HOME/dotfiles/bin"
 
-#echo "end: bash_profile"
+echo "end: bash_profile"
+export PATH="/usr/local/opt/freetds@0.91/bin:$PATH"
